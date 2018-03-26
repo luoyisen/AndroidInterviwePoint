@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_download_singlethread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/divider"
+        android:text="单线程下载" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_download_multithread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/divider"
+        android:text="多线程下载" />
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_download_multithread"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+
+</RelativeLayout>
