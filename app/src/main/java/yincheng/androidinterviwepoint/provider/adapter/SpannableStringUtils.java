@@ -1,4 +1,4 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 import android.graphics.Bitmap;
 import android.graphics.BlurMaskFilter;
@@ -34,7 +34,7 @@ import android.text.style.UnderlineSpan;
 import static android.graphics.BlurMaskFilter.Blur;
 
 /**
- * Mail : luoyincheng@gmail.com
+ * Mail   : luoyincheng@gmail.com
  * Date   : 2018:04:01 12:55
  * Github : yincheng.luo
  */

@@ -2,7 +2,7 @@ package yincheng.androidinterviwepoint;
 
 import android.app.Application;
 
-import yincheng.androidinterviwepoint.adapter.Utils;
+import yincheng.androidinterviwepoint.provider.adapter.Utils;
 
 /**
  * Mail : luoyincheng@gmail.com

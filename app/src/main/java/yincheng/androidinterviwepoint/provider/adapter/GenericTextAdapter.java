@@ -1,4 +1,4 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;

@@ -1,9 +1,9 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 import android.content.Context;
 
 /**
- * Mail : luoyincheng@gmail.com
+ * Mail   : luoyincheng@gmail.com
  * Date   : 2018:04:01 12:56
  * Github : yincheng.luo
  */

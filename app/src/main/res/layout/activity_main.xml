@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="yincheng.androidinterviwepoint.MainActivity">
+    tools:context="yincheng.androidinterviwepoint.ui.activity.simpleactivity.MainActivity">
 
     <!--<br.tiagohm.markdownview.MarkdownView-->
     <!--android:id="@+id/mark_view"-->

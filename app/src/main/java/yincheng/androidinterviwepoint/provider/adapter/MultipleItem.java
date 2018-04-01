@@ -1,4 +1,4 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 

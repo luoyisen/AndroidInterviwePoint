@@ -1,4 +1,4 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 /**
  * github : yincheng.luo

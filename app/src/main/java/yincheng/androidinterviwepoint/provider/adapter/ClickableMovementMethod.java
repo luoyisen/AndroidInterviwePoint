@@ -1,4 +1,4 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 import android.text.Layout;
 import android.text.Selection;
@@ -9,7 +9,7 @@ import android.view.MotionEvent;
 import android.widget.TextView;
 
 /**
- * Mail : luoyincheng@gmail.com
+ * Mail   : luoyincheng@gmail.com
  * Date   : 2018:04:01 13:12
  * Github : yincheng.luo
  */

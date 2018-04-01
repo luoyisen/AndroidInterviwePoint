@@ -1,4 +1,4 @@
-package yincheng.androidinterviwepoint.publicutilies;
+package yincheng.androidinterviwepoint.ui.dialog;
 
 /**
  * Created by commi on 2018/3/23.

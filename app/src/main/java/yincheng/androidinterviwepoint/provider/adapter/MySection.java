@@ -1,9 +1,9 @@
-package yincheng.androidinterviwepoint.adapter;
+package yincheng.androidinterviwepoint.provider.adapter;
 
 import com.chad.library.adapter.base.entity.SectionEntity;
 
 /**
- * Mail : luoyincheng@gmail.com
+ * Mail   : luoyincheng@gmail.com
  * Date   : 2018:04:01 12:33
  * Github : yincheng.luo
  */

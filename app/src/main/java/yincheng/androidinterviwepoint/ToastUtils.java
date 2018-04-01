@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.support.annotation.StringRes;
 import android.widget.Toast;
 
-import yincheng.androidinterviwepoint.adapter.Utils;
+import yincheng.androidinterviwepoint.provider.adapter.Utils;
 
 /**
  * Mail : luoyincheng@gmail.com
