@@ -3,7 +3,6 @@ package yincheng.androidinterviwepoint.primary.asynctask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -77,14 +76,12 @@ public class ActivityAsyncTask extends AppCompatActivity {
     private class DownloadTask extends AsyncTask<String, Object, Long> {
         @Override
         protected void onPreExecute() {
-            Log.i("iSpring", "DownloadTask -> onPreExecute, Thread name: " + Thread.currentThread().getName());
             super.onPreExecute();
             textView.setText("开始下载...");
         }
 
         @Override
         protected Long doInBackground(String... params) {
-            Log.i("iSpring", "DownloadTask -> doInBackground, Thread name: " + Thread.currentThread().getName());
             //totalByte表示所有下载的文件的总字节数
             long totalByte = 0;
             //params是一个String数组
@@ -145,7 +142,6 @@ public class ActivityAsyncTask extends AppCompatActivity {
 
         @Override
         protected void onProgressUpdate(Object... values) {
-            Log.i("iSpring", "DownloadTask -> onProgressUpdate, Thread name: " + Thread.currentThread().getName());
             super.onProgressUpdate(values);
             int byteCount = (int) values[0];
             String blogName = (String) values[1];
@@ -156,7 +152,6 @@ public class ActivityAsyncTask extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long aLong) {
-            Log.i("iSpring", "DownloadTask -> onPostExecute, Thread name: " + Thread.currentThread().getName());
             super.onPostExecute(aLong);
             String text = textView.getText().toString();
             text += "\n全部下载完成，总共下载了" + aLong + "个字节";
@@ -165,7 +160,6 @@ public class ActivityAsyncTask extends AppCompatActivity {
 
         @Override
         protected void onCancelled() {
-            Log.i("iSpring", "DownloadTask -> onCancelled, Thread name: " + Thread.currentThread().getName());
             super.onCancelled();
             textView.setText("取消下载");
         }

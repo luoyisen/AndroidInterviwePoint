@@ -131,11 +131,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  * <p>
  * <h2>Cancelling a task</h2>
  * <p>A task can be cancelled at any time by invoking {@link #cancel(boolean)}. Invoking
- * this method will cause subsequent calls to {@link #isCancelled()} to return true.
+ * this method will cause subsequent(后续的) calls to {@link #isCancelled()} to return true.
  * After invoking this method, {@link #onCancelled(Object)}, instead of
  * {@link #onPostExecute(Object)} will be invoked after {@link #doInBackground(Object[])}
  * returns. To ensure that a task is cancelled as quickly as possible, you should always
- * check the return value of {@link #isCancelled()} periodically from
+ * check the return value of {@link #isCancelled()} periodically(定期的) from
  * {@link #doInBackground(Object[])}, if possible (inside a loop for instance.)</p>
  * <p>
  * <h2>Threading rules</h2>
@@ -154,7 +154,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * <p>
  * <h2>Memory observability</h2>
  * <p>AsyncTask guarantees that all callback calls are synchronized in such a way that the following
- * operations are safe without explicit synchronizations.</p>
+ * operations are safe without explicit(明确的，显式的) synchronizations.</p>
  * <ul>
  * <li>Set member fields in the constructor or {@link #onPreExecute}, and refer to them
  * in {@link #doInBackground}.
@@ -163,11 +163,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  * </ul>
  * <p>
  * <h2>Order of execution</h2>
- * <p>When first introduced, AsyncTasks were executed serially on a single background
- * thread. Starting with {@link android.os.Build.VERSION_CODES#DONUT}, this was changed
- * to a pool of threads allowing multiple tasks to operate in parallel. Starting with
+ * <p>When first introduced(引进), AsyncTasks were executed serially on a single background
+ * thread(AsyncTasks最初被创建的时候，它只能严格的在单线程中执行). Starting with {@link android.os.Build.VERSION_CODES#DONUT}, this was changed
+ * to a pool of threads allowing multiple tasks to operate in parallel(平行). Starting with
  * {@link android.os.Build.VERSION_CODES#HONEYCOMB}, tasks are executed on a single
- * thread to avoid common application errors caused by parallel execution.</p>
+ * thread to avoid common application errors caused by parallel execution(多线程会导致许多问题，因此现在默认是在单线程中执行AsyncTasks,一个任务执行完成以后才会开始执行下一个).</p>
  * <p>If you truly want parallel execution, you can invoke
  * {@link #executeOnExecutor(java.util.concurrent.Executor, Object[])} with
  * {@link #THREAD_POOL_EXECUTOR}.</p>
@@ -229,10 +229,14 @@ public abstract class AsyncTask<Params, Progress, Result> {
 
     private final Handler mHandler;
 
+    /**
+     * 默认的Executor，下载多个任务的时候，会一个一个去下载，下载完成一个才会去执行下一个下载任务
+     */
     private static class SerialExecutor implements Executor {
-        final ArrayDeque<Runnable> mTasks = new ArrayDeque<Runnable>();
+        final ArrayDeque<Runnable> mTasks = new ArrayDeque<Runnable>();//ArrayDeque默认有16个元素
         Runnable mActive;
 
+        //具体的执行方法
         public synchronized void execute(final Runnable r) {
             mTasks.offer(new Runnable() {
                 public void run() {
@@ -646,7 +650,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
     /**
      * This method can be invoked from {@link #doInBackground} to
      * publish updates on the UI thread while the background computation is
-     * still running. Each call to this method will trigger the execution of
+     * still running. Each call to this method will trigger(触发) the execution of
      * {@link #onProgressUpdate} on the UI thread.
      * <p>
      * {@link #onProgressUpdate} will not be called if the task has been
@@ -702,10 +706,10 @@ public abstract class AsyncTask<Params, Progress, Result> {
         Params[] mParams;
     }
 
-    @SuppressWarnings({"RawUseOfParameterizedType"})
     /**
      * 持有一个Asynctask对象
      */
+    @SuppressWarnings({"RawUseOfParameterizedType"})
     private static class AsyncTaskResult<Data> {
         final AsyncTask mTask;
         final Data[] mData;
